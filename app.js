@@ -1,6 +1,6 @@
 
 const clickHandler = (e) => {
-    e.target.innerHTML = "X";
+    // e.target.innerHTML = "X";
 }
 
 
