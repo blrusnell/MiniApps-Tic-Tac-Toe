@@ -8,7 +8,7 @@ const eachSquare = Array.prototype.slice.call(htmlCollection);
 let turnBoolean = false;
 
 //puts x or o in cell
-const clickHandler = (e) => {
+const xoHandler = (e) => {
     if (e.target.innerHTML === "") {
         turnBoolean = !turnBoolean;
         if (turnBoolean) {
@@ -24,7 +24,7 @@ const clickHandler = (e) => {
 
 
 //apply click to each cell
-eachSquare.map(e => e.addEventListener("click", clickHandler));
+eachSquare.map(e => e.addEventListener("click", xoHandler));
 
 
 
@@ -50,7 +50,7 @@ const winnerCheck = () => {
    let diag1 = one + five + nine;
    let diag2 = seven + five + three;
 
-   console.log(row1);
+
    if (row1 === "XXX" || row1 === "OOO") {
        alert('winner');
    }
@@ -75,6 +75,10 @@ const winnerCheck = () => {
    if (diag2 === "XXX" || diag2 === "OOO") {
     alert('winner')
    }
-
 };
 
+
+//button to clear board
+const resetGame =() => {
+    window.location.reload();
+} 
