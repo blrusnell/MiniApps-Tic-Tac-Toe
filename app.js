@@ -1,12 +1,13 @@
-let turnBoolean = true;
+let turnBoolean = false;
 
 const clickHandler = (e) => {
-    if (e.target.innerHTML === '') {
-        e.target.innerHTML = "X";
+    if (e.target.innerHTML === "") {
         turnBoolean = !turnBoolean;
-    }
-    if (turnBoolean === true) {
-        e.target.innerHTML = "O";
+        if (turnBoolean) {
+            e.target.innerHTML = "X";
+        } else {
+            e.target.innerHTML = "O";
+        }
     }
 }
 
