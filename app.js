@@ -79,6 +79,10 @@ const winnerCheck = () => {
 
 
 //button to clear board
-const resetGame =() => {
-    window.location.reload();
+const resetGame =(e) => {
+    let xos = Array.prototype.slice.call(document.getElementsByClassName('square'));
+    xos.map(function(i) {
+        i.innerHTML = ''
+    });
 } 
+
