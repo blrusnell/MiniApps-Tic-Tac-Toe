@@ -41,48 +41,56 @@ const winnerCheck = () => {
     const eight = document.getElementById('eight').textContent;
     const nine = document.getElementById('nine').textContent;
 
-   let row1 = one + two + three;
-   let row2 = four + five + six;
-   let row3 = six + seven + eight;
-   let col1 = one + four + seven;
-   let col2 = two + five + eight;
-   let col3 = three + six + nine;
-   let diag1 = one + five + nine;
-   let diag2 = seven + five + three;
+    let row1 = one + two + three;
+    let row2 = four + five + six;
+    let row3 = six + seven + eight;
+    let col1 = one + four + seven;
+    let col2 = two + five + eight;
+    let col3 = three + six + nine;
+    let diag1 = one + five + nine;
+    let diag2 = seven + five + three;
 
 
    if (row1 === "XXX" || row1 === "OOO") {
        alert('winner');
+       resetGame();
    }
    if (row2 === "XXX" || row2 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (row3 === "XXX" || row3 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (col1 === "XXX" || col1 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (col2 === "XXX" || col2 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (col3 === "XXX" || col3 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (diag1 === "XXX" || diag1 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
    if (diag2 === "XXX" || diag2 === "OOO") {
-    alert('winner')
+        alert('winner');
+        resetGame();
    }
 };
 
 
 //button to clear board
-const resetGame =(e) => {
-    let xos = Array.prototype.slice.call(document.getElementsByClassName('square'));
-    xos.map(function(i) {
-        i.innerHTML = ''
+const resetGame =() => {
+    let nonEmptyBoard = Array.prototype.slice.call(document.getElementsByClassName('square'));
+    nonEmptyBoard.map((i) => {
+        i.innerHTML = '';
     });
-} 
+}; 
 
